@@ -101,6 +101,15 @@
                             <constraint firstItem="gSj-uD-Lqu" firstAttribute="top" secondItem="8x6-vv-lPE" secondAttribute="bottom" constant="11" id="rhy-wh-EUP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="gSj-uD-Lqu" id="K5m-s4-YzT"/>
+                        <outlet property="blueValue" destination="At9-X5-f5b" id="oTi-8G-p5b"/>
+                        <outlet property="greenSlider" destination="8x6-vv-lPE" id="fhw-EL-SlJ"/>
+                        <outlet property="greenValue" destination="ZWX-0j-3Ca" id="j4L-r9-6Mx"/>
+                        <outlet property="redSlider" destination="DIB-S5-0Sx" id="V13-9R-Nme"/>
+                        <outlet property="redValue" destination="LOU-fJ-3W8" id="G6n-Vo-Skr"/>
+                        <outlet property="rgbRectangle" destination="aJe-Ug-BEx" id="sma-dn-D2x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
