@@ -27,16 +27,26 @@ final class ViewController: UIViewController {
         blueSliderAction()
 
     }
+    
 
+    
+    
     @IBAction func redSliderAction(){
         redValue.text = redSlider.value.formatted()
-//        rgbRectangle.backgroundColor = redSlider
+        
+        
+//        rgbRectangle.backgroundColor =
     }
     @IBAction func greenSliderAction(){
         greenValue.text = greenSlider.value.formatted()
     }
     @IBAction func blueSliderAction(){
         blueValue.text = blueSlider.value.formatted()
+    }
+    
+    
+    private func redValueSetup(){
+        
     }
 
     
