@@ -8,7 +8,7 @@
 import UIKit
 
 final class ViewController: UIViewController {
-
+    //MARK: Outlets
     @IBOutlet var rgbRectangle: UIView!
     
     @IBOutlet var redSlider: UISlider!
@@ -27,27 +27,34 @@ final class ViewController: UIViewController {
         blueSliderAction()
        
     }
+    //MARK: Slider Action
     
     @IBAction func redSliderAction(){
         redValue.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                               green: CGFloat(greenSlider.value),
-                                               blue: CGFloat(blueSlider.value),
-                                               alpha: 1)
+        rgbRectangle.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
     }
     @IBAction func greenSliderAction(){
         greenValue.text = greenSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                               green: CGFloat(greenSlider.value),
-                                               blue: CGFloat(blueSlider.value),
-                                               alpha: 1)
+        rgbRectangle.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
     }
     @IBAction func blueSliderAction(){
         blueValue.text = blueSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                               green: CGFloat(greenSlider.value),
-                                               blue: CGFloat(blueSlider.value),
-                                               alpha: 1)
+        rgbRectangle.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
     }
 }
 
