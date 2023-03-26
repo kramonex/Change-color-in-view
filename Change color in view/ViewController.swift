@@ -25,26 +25,29 @@ final class ViewController: UIViewController {
         redSliderAction()
         greenSliderAction()
         blueSliderAction()
-
+       
     }
-    
-
-    
     
     @IBAction func redSliderAction(){
         redValue.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = .red
+        rgbRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                               green: CGFloat(greenSlider.value),
+                                               blue: CGFloat(blueSlider.value),
+                                               alpha: 1)
     }
     @IBAction func greenSliderAction(){
         greenValue.text = greenSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = .green
+        rgbRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                               green: CGFloat(greenSlider.value),
+                                               blue: CGFloat(blueSlider.value),
+                                               alpha: 1)
     }
     @IBAction func blueSliderAction(){
         blueValue.text = blueSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = .blue
+        rgbRectangle.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                               green: CGFloat(greenSlider.value),
+                                               blue: CGFloat(blueSlider.value),
+                                               alpha: 1)
     }
-    
-    
-    
 }
 
