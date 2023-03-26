@@ -33,12 +33,15 @@ final class ViewController: UIViewController {
     
     @IBAction func redSliderAction(){
         redValue.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
+        rgbRectangle.backgroundColor = .red
     }
     @IBAction func greenSliderAction(){
         greenValue.text = greenSlider.value.formatted(.number.precision(.fractionLength(2)))
+        rgbRectangle.backgroundColor = .green
     }
     @IBAction func blueSliderAction(){
         blueValue.text = blueSlider.value.formatted(.number.precision(.fractionLength(2)))
+        rgbRectangle.backgroundColor = .blue
     }
     
     
