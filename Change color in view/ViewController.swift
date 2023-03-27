@@ -29,32 +29,26 @@ final class ViewController: UIViewController {
     }
     //MARK: Slider Action
     
-    @IBAction func redSliderAction(){
-        redValue.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
+    func rgbRectangleColor(){
         rgbRectangle.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
+    }
+    
+    @IBAction func redSliderAction(){
+        redValue.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
+        rgbRectangleColor()
     }
     @IBAction func greenSliderAction(){
         greenValue.text = greenSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1
-        )
+        rgbRectangleColor()
     }
     @IBAction func blueSliderAction(){
         blueValue.text = blueSlider.value.formatted(.number.precision(.fractionLength(2)))
-        rgbRectangle.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1
-        )
+        rgbRectangleColor()
     }
 }
 
