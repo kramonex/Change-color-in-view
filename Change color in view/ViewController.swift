@@ -21,22 +21,15 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         rgbRectangle.layer.cornerRadius = 20
+        
         redSliderAction()
         greenSliderAction()
         blueSliderAction()
        
     }
     //MARK: Slider Action
-    
-    func rgbRectangleColor(){
-        rgbRectangle.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1
-        )
-    }
     
     @IBAction func redSliderAction(){
         redValue.text = redSlider.value.formatted(.number.precision(.fractionLength(2)))
@@ -49,6 +42,15 @@ final class ViewController: UIViewController {
     @IBAction func blueSliderAction(){
         blueValue.text = blueSlider.value.formatted(.number.precision(.fractionLength(2)))
         rgbRectangleColor()
+    }
+    
+    private func rgbRectangleColor(){
+        rgbRectangle.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
     }
 }
 
